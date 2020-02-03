@@ -256,7 +256,7 @@ public class MapScreen : MonoBehaviour {
 	public static bool Keysquare;
 	public static bool Endsquare;
 
-    public string PP;
+    public static string PP;
 
 
 	// Use this for initialization
@@ -761,7 +761,135 @@ public class MapScreen : MonoBehaviour {
 		if (Endsquare == true) {
 			EndSquare.SetActive (true);
 		}
-	}
+        if (PP == "Start")
+        {
+            StartIcon.SetActive(true);
+        }
+        else if (PP != "Start")
+        {
+            StartIcon.SetActive(false);
+        }
+        if (PP =="A5")
+        {
+            A5Icon.SetActive(true);
+        }
+        else if (PP != "A5")
+        {
+            A5Icon.SetActive(false);
+        }
+        if (PP == "A6")
+        {
+            A6Icon.SetActive(true);
+        }
+        else if (PP != "A6")
+        {
+            A6Icon.SetActive(false);
+        }
+        if (PP =="A7")
+        {
+            A7Icon.SetActive(true);
+        }
+        else if (PP != "A7")
+        {
+            A7Icon.SetActive(false);
+        }
+        if (PP == "A8")
+        {
+            A8Icon.SetActive(true);
+        }
+        else if (PP != "A8")
+        {
+            A8Icon.SetActive(false);
+        }
+        if (PP == "A9")
+        {
+            A9Icon.SetActive(true);
+        }
+        else if (PP != "A9")
+        {
+            A9Icon.SetActive(false);
+        }
+        if (PP == "A10")
+        {
+            A10Icon.SetActive(true);
+        }
+        else if (PP != "A10")
+        {
+            A10Icon.SetActive(false);
+        }
+        if (PP == "A11")
+        {
+            A11Icon.SetActive(true);
+        }
+        else if (PP != "A11")
+        {
+            A11Icon.SetActive(false);
+        }
+        if (PP == "A12")
+        {
+            A12Icon.SetActive(true);
+        }
+        else if (PP != "A12")
+        {
+            A12Icon.SetActive(false);
+        }
+        if (PP == "A13")
+        {
+            A13Icon.SetActive(true);
+        }
+        else if (PP != "A13")
+        {
+            A13Icon.SetActive(false);
+        }
+        if (PP == "A14")
+        {
+            A14Icon.SetActive(true);
+        }
+        else if (PP != "A14")
+        {
+            A14Icon.SetActive(false);
+        }
+        if (PP == "B7")
+        {
+            B7Icon.SetActive(true);
+        }
+        else if (PP != "B7")
+        {
+            B7Icon.SetActive(false);
+        }
+        if (PP == "B14")
+        {
+            B14Icon.SetActive(true);
+        }
+        else if (PP != "B14")
+        {
+            B14Icon.SetActive(false);
+        }
+        if (PP == "C7")
+        {
+            C7Icon.SetActive(true);
+        }
+        else if (PP != "C7")
+        {
+            C7Icon.SetActive(false);
+        }
+        if (PP == "C8")
+        {
+            C8Icon.SetActive(true);
+        }
+        else if (PP != "C8")
+        {
+            C8Icon.SetActive(false);
+        }
+        if (PP == "C9")
+        {
+            C9Icon.SetActive(true);
+        }
+        else if (PP != "C9")
+        {
+            C9Icon.SetActive(false);
+        }
+    }
 
 	void Continue() { //create a function for continuing the game
 		//set the MoveCamera and FlashLight scripts active again so the player may play the game
@@ -775,160 +903,415 @@ public class MapScreen : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other) { //when the wallChecker collides with a room trigger
 		//create a series of if statements that set certain boolean vars to true when the player enters a room with the flashlight on
-		if (other.gameObject.CompareTag ("A5") && FlashLight.lightSwitch == 1) {
-			A5square = true;
+		if (other.gameObject.CompareTag ("A5")) {
+            PP = "A5";
+            if (FlashLight.lightSwitch == 1)
+            {
+                A5square = true;
+            }
 		}
-		if (other.gameObject.CompareTag ("A6") && FlashLight.lightSwitch == 1) {
-			A6square = true;
-		}
-		if (other.gameObject.CompareTag ("A7") && FlashLight.lightSwitch == 1) {
-			A7square = true;
-		}
-		if (other.gameObject.CompareTag ("A8") && FlashLight.lightSwitch == 1) {
-			A8square = true;
-		}
-		if (other.gameObject.CompareTag ("A9") && FlashLight.lightSwitch == 1) {
-			A9square = true;
-		}
-		if (other.gameObject.CompareTag ("A10") && FlashLight.lightSwitch == 1) {
-			A10square = true;
-		}
-		if (other.gameObject.CompareTag ("A11") && FlashLight.lightSwitch == 1) {
-			A11square = true;
-		}
-		if (other.gameObject.CompareTag ("A12") && FlashLight.lightSwitch == 1) {
-			A12square = true;
-		}
-		if (other.gameObject.CompareTag ("A13") && FlashLight.lightSwitch == 1) {
-			A13square = true;
-		}
-		if (other.gameObject.CompareTag ("A14") && FlashLight.lightSwitch == 1) {
-			A14square = true;
-		}
-		if (other.gameObject.CompareTag ("B7") && FlashLight.lightSwitch == 1) {
-			B7square = true;
-		}
-		if (other.gameObject.CompareTag ("B14") && FlashLight.lightSwitch == 1) {
-			B14square = true;
-		}
-		if (other.gameObject.CompareTag ("C7") && FlashLight.lightSwitch == 1) {
-			C7square = true;
-		}
-		if (other.gameObject.CompareTag ("C8") && FlashLight.lightSwitch == 1) {
-			C8square = true;
-		}
-		if (other.gameObject.CompareTag ("C9") && FlashLight.lightSwitch == 1) {
-			C9square = true;
-		}
-		if (other.gameObject.CompareTag ("C13") && FlashLight.lightSwitch == 1) {
-			C13square = true;
-		}
-		if (other.gameObject.CompareTag ("C14") && FlashLight.lightSwitch == 1) {
-			C14square = true;
-		}
-		if (other.gameObject.CompareTag ("D4") && FlashLight.lightSwitch == 1) {
-			D4square = true;
-		}
-		if (other.gameObject.CompareTag ("D5") && FlashLight.lightSwitch == 1) {
-			D5square = true;
-		}
-		if (other.gameObject.CompareTag ("D6") && FlashLight.lightSwitch == 1) {
-			D6square = true;
-		}
-		if (other.gameObject.CompareTag ("D13") && FlashLight.lightSwitch == 1) {
-			D13square = true;
-		}
-		if (other.gameObject.CompareTag ("E4") && FlashLight.lightSwitch == 1) {
-			E4square = true;
-		}
-		if (other.gameObject.CompareTag ("E6") && FlashLight.lightSwitch == 1) {
-			E6square = true;
-		}
-		if (other.gameObject.CompareTag ("E7") && FlashLight.lightSwitch == 1) {
-			E7square = true;
-		}
-		if (other.gameObject.CompareTag ("E8") && FlashLight.lightSwitch == 1) {
-			E8square = true;
-		}
-		if (other.gameObject.CompareTag ("E9") && FlashLight.lightSwitch == 1) {
-			E9square = true;
-		}
-		if (other.gameObject.CompareTag ("E10") && FlashLight.lightSwitch == 1) {
-			E10square = true;
-		}
-		if (other.gameObject.CompareTag ("E11") && FlashLight.lightSwitch == 1) {
-			E11square = true;
-		}
-		if (other.gameObject.CompareTag ("E13") && FlashLight.lightSwitch == 1) {
-			E13square = true;
-		}
-		if (other.gameObject.CompareTag ("E14") && FlashLight.lightSwitch == 1) {
-			E14square = true;
-		}
-		if (other.gameObject.CompareTag ("F4") && FlashLight.lightSwitch == 1) {
-			F4square = true;
-		}
-		if (other.gameObject.CompareTag ("F11") && FlashLight.lightSwitch == 1) {
-			F11square = true;
-		}
-		if (other.gameObject.CompareTag ("F12") && FlashLight.lightSwitch == 1) {
-			F12square = true;
-		}
-		if (other.gameObject.CompareTag ("F14") && FlashLight.lightSwitch == 1) {
-			F14square = true;
-		}
-		if (other.gameObject.CompareTag ("G1") && FlashLight.lightSwitch == 1) {
-			G1square = true;
-		}
-		if (other.gameObject.CompareTag ("G2") && FlashLight.lightSwitch == 1) {
-			G2square = true;
-		}
-		if (other.gameObject.CompareTag ("G3") && FlashLight.lightSwitch == 1) {
-			G3square = true;
-		}
-		if (other.gameObject.CompareTag ("G4") && FlashLight.lightSwitch == 1) {
-			G4square = true;
-		}
-		if (other.gameObject.CompareTag ("G8") && FlashLight.lightSwitch == 1) {
-			G8square = true;
-		}
-		if (other.gameObject.CompareTag ("G12") && FlashLight.lightSwitch == 1) {
-			G12square = true;
-		}
-		if (other.gameObject.CompareTag ("G13") && FlashLight.lightSwitch == 1) {
-			G13square = true;
-		}
-		if (other.gameObject.CompareTag ("G14") && FlashLight.lightSwitch == 1) {
-			G14square = true;
-		}
-		if (other.gameObject.CompareTag ("H1") && FlashLight.lightSwitch == 1) {
-			H1square = true;
-		}
-		if (other.gameObject.CompareTag ("H4") && FlashLight.lightSwitch == 1) {
-			H4square = true;
-		}
-		if (other.gameObject.CompareTag ("H8") && FlashLight.lightSwitch == 1) {
-			H8square = true;
-		}
-		if (other.gameObject.CompareTag ("H9") && FlashLight.lightSwitch == 1) {
-			H9square = true;
-		}
-		if (other.gameObject.CompareTag ("H10") && FlashLight.lightSwitch == 1) {
-			H10square = true;
-		}
-		if (other.gameObject.CompareTag ("H11") && FlashLight.lightSwitch == 1) {
-			H11square = true;
-		}
-		if (other.gameObject.CompareTag ("H14") && FlashLight.lightSwitch == 1) {
-			H14square = true;
-		}
-		if (other.gameObject.CompareTag ("I1") && FlashLight.lightSwitch == 1) {
-			I1square = true;
-		}
-		if (other.gameObject.CompareTag ("I4") && FlashLight.lightSwitch == 1) {
-			I4square = true;
-		}
-		if (other.gameObject.CompareTag ("I6")) {
+        if (other.gameObject.CompareTag("A6"))
+        {
+            PP = "A6";
+            if (FlashLight.lightSwitch == 1)
+            {
+                A6square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("A7"))
+        {
+            PP = "A7";
+            if (FlashLight.lightSwitch == 1)
+            {
+                A7square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("A8"))
+        {
+            PP = "A8";
+            if (FlashLight.lightSwitch == 1)
+            {
+                A8square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("A9"))
+        {
+            PP = "A9";
+            if (FlashLight.lightSwitch == 1)
+            {
+                A9square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("A10"))
+        {
+            PP = "A10";
+            if (FlashLight.lightSwitch == 1)
+            {
+                A10square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("A11"))
+        {
+            PP = "A11";
+            if (FlashLight.lightSwitch == 1)
+            {
+                A11square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("A12"))
+        {
+            PP = "A12";
+            if (FlashLight.lightSwitch == 1)
+            {
+                A12square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("A13"))
+        {
+            PP = "A13";
+            if (FlashLight.lightSwitch == 1)
+            {
+                A13square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("A14"))
+        {
+            PP = "A14";
+            if (FlashLight.lightSwitch == 1)
+            {
+                A14square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("B7"))
+        {
+            PP = "B7";
+            if (FlashLight.lightSwitch == 1)
+            {
+                B7square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("B14"))
+        {
+            PP = "B14";
+            if (FlashLight.lightSwitch == 1)
+            {
+                B14square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("C7"))
+        {
+            PP = "C7";
+            if (FlashLight.lightSwitch == 1)
+            {
+                C7square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("C8"))
+        {
+            PP = "C8";
+            if (FlashLight.lightSwitch == 1)
+            {
+                C8square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("C9"))
+        {
+            PP = "C9";
+            if (FlashLight.lightSwitch == 1)
+            {
+                C9square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("C13"))
+        {
+            PP = "C13";
+            if (FlashLight.lightSwitch == 1)
+            {
+                C13square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("C14"))
+        {
+            PP = "C14";
+            if (FlashLight.lightSwitch == 1)
+            {
+                C14square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("D4"))
+        {
+            PP = "D4";
+            if (FlashLight.lightSwitch == 1)
+            {
+                D4square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("D5"))
+        {
+            PP = "D5";
+            if (FlashLight.lightSwitch == 1)
+            {
+                D5square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("D6"))
+        {
+            PP = "D6";
+            if (FlashLight.lightSwitch == 1)
+            {
+                D6square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("D13"))
+        {
+            PP = "D13";
+            if (FlashLight.lightSwitch == 1)
+            {
+                D13square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("E4"))
+        {
+            PP = "E4";
+            if (FlashLight.lightSwitch == 1)
+            {
+                E4square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("E6"))
+        {
+            PP = "E6";
+            if (FlashLight.lightSwitch == 1)
+            {
+                E6square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("E7"))
+        {
+            PP = "E7";
+            if (FlashLight.lightSwitch == 1)
+            {
+                E7square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("E8"))
+        {
+            PP = "E8";
+            if (FlashLight.lightSwitch == 1)
+            {
+                E8square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("E9"))
+        {
+            PP = "E9";
+            if (FlashLight.lightSwitch == 1)
+            {
+                E9square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("E10"))
+        {
+            PP = "E10";
+            if (FlashLight.lightSwitch == 1)
+            {
+                E10square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("E11"))
+        {
+            PP = "E11";
+            if (FlashLight.lightSwitch == 1)
+            {
+                E11square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("E13"))
+        {
+            PP = "E13";
+            if (FlashLight.lightSwitch == 1)
+            {
+                E13square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("E14"))
+        {
+            PP = "E14";
+            if (FlashLight.lightSwitch == 1)
+            {
+                E14square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("F4"))
+        {
+            PP = "F4";
+            if (FlashLight.lightSwitch == 1)
+            {
+                F4square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("F11"))
+        {
+            PP = "F11";
+            if (FlashLight.lightSwitch == 1)
+            {
+                F11square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("F12"))
+        {
+            PP = "F12";
+            if (FlashLight.lightSwitch == 1)
+            {
+                F12square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("F14"))
+        {
+            PP = "F14";
+            if (FlashLight.lightSwitch == 1)
+            {
+                F14square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("G1"))
+        {
+            PP = "G1";
+            if (FlashLight.lightSwitch == 1)
+            {
+                G1square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("G2"))
+        {
+            PP = "G2";
+            if (FlashLight.lightSwitch == 1)
+            {
+                G2square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("G3"))
+        {
+            PP = "G3";
+            if (FlashLight.lightSwitch == 1)
+            {
+                G3square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("G4"))
+        {
+            PP = "G4";
+            if (FlashLight.lightSwitch == 1)
+            {
+                G4square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("G8"))
+        {
+            PP = "G8";
+            if (FlashLight.lightSwitch == 1)
+            {
+                G8square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("G12"))
+        {
+            PP = "G12";
+            if (FlashLight.lightSwitch == 1)
+            {
+                G12square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("G13"))
+        {
+            PP = "G13";
+            if (FlashLight.lightSwitch == 1)
+            {
+                G13square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("G14"))
+        {
+            PP = "G14";
+            if (FlashLight.lightSwitch == 1)
+            {
+                G14square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("H1"))
+        {
+            PP = "H1";
+            if (FlashLight.lightSwitch == 1)
+            {
+                H1square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("H4"))
+        {
+            PP = "H4";
+            if (FlashLight.lightSwitch == 1)
+            {
+                H4square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("H8"))
+        {
+            PP = "H8";
+            if (FlashLight.lightSwitch == 1)
+            {
+                H8square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("H9"))
+        {
+            PP = "H9";
+            if (FlashLight.lightSwitch == 1)
+            {
+                H1square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("H10"))
+        {
+            PP = "H10";
+            if (FlashLight.lightSwitch == 1)
+            {
+                H10square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("H11"))
+        {
+            PP = "H11";
+            if (FlashLight.lightSwitch == 1)
+            {
+                H11square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("H14"))
+        {
+            PP = "H14";
+            if (FlashLight.lightSwitch == 1)
+            {
+                H14square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("I1"))
+        {
+            PP = "I1";
+            if (FlashLight.lightSwitch == 1)
+            {
+                I1square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("I4"))
+        {
+            PP = "I4";
+            if (FlashLight.lightSwitch == 1)
+            {
+                I4square = true;
+            }
+        }
+        if (other.gameObject.CompareTag ("I6")) {
+            PP = "I6";
             if (BatteryAlive == true)
             {
                 Destroy(batteryPickup);
@@ -939,79 +1322,200 @@ public class MapScreen : MonoBehaviour {
                 I6square = true;
             }
 		}
-		if (other.gameObject.CompareTag ("I8") && FlashLight.lightSwitch == 1) {
-			I8square = true;
-		}
-		if (other.gameObject.CompareTag ("I11") && FlashLight.lightSwitch == 1) {
-			I11square = true;
-		}
-		if (other.gameObject.CompareTag ("I14") && FlashLight.lightSwitch == 1) {
-			I14square = true;
-		}
-		if (other.gameObject.CompareTag ("J1") && FlashLight.lightSwitch == 1) {
-			J1square = true;
-		}
-		if (other.gameObject.CompareTag ("J4") && FlashLight.lightSwitch == 1) {
-			J4square = true;
-		}
-		if (other.gameObject.CompareTag ("J6") && FlashLight.lightSwitch == 1) {
-			J6square = true;
-		}
-		if (other.gameObject.CompareTag ("J8") && FlashLight.lightSwitch == 1) {
-			J8square = true;
-		}
-		if (other.gameObject.CompareTag ("J10") && FlashLight.lightSwitch == 1) {
-			J10square = true;
-		}
-		if (other.gameObject.CompareTag ("J11") && FlashLight.lightSwitch == 1) {
-			J11square = true;
-		}
-		if (other.gameObject.CompareTag ("J14") && FlashLight.lightSwitch == 1) {
-			J14square = true;
-		}
-		if (other.gameObject.CompareTag ("K1") && FlashLight.lightSwitch == 1) {
-			K1square = true;
-		}
-		if (other.gameObject.CompareTag ("K4") && FlashLight.lightSwitch == 1) {
-			K4square = true;
-		}
-		if (other.gameObject.CompareTag ("K6") && FlashLight.lightSwitch == 1) {
-			K6square = true;
-		}
-		if (other.gameObject.CompareTag ("K10") && FlashLight.lightSwitch == 1) {
-			K10square = true;
-		}
-		if (other.gameObject.CompareTag ("K14") && FlashLight.lightSwitch == 1) {
-			K14square = true;
-		}
-		if (other.gameObject.CompareTag ("L1") && FlashLight.lightSwitch == 1) {
-			L1square = true;
-		}
-		if (other.gameObject.CompareTag ("L4") && FlashLight.lightSwitch == 1) {
-			L4square = true;
-		}
-		if (other.gameObject.CompareTag ("L5") && FlashLight.lightSwitch == 1) {
-			L5square = true;
-		}
-		if (other.gameObject.CompareTag ("L6") && FlashLight.lightSwitch == 1) {
-			L6square = true;
-		}
-		if (other.gameObject.CompareTag ("L10") && FlashLight.lightSwitch == 1) {
-			L10square = true;
-		}
-		if (other.gameObject.CompareTag ("L11") && FlashLight.lightSwitch == 1) {
-			L11square = true;
-		}
-		if (other.gameObject.CompareTag ("L12") && FlashLight.lightSwitch == 1) {
-			L12square = true;
-		}
-		if (other.gameObject.CompareTag ("L13") && FlashLight.lightSwitch == 1) {
-			L13square = true;
-		}
-		if (other.gameObject.CompareTag ("L14") && FlashLight.lightSwitch == 1) {
-			L14square = true;
-		}
-		if (other.gameObject.CompareTag ("Key")) { //if the player enters the key room trigger
+        if (other.gameObject.CompareTag("I8"))
+        {
+            PP = "I8";
+            if (FlashLight.lightSwitch == 1)
+            {
+                I8square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("I11"))
+        {
+            PP = "I11";
+            if (FlashLight.lightSwitch == 1)
+            {
+                I11square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("I14"))
+        {
+            PP = "I14";
+            if (FlashLight.lightSwitch == 1)
+            {
+                I14square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("J1"))
+        {
+            PP = "J1";
+            if (FlashLight.lightSwitch == 1)
+            {
+                J1square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("J4"))
+        {
+            PP = "J4";
+            if (FlashLight.lightSwitch == 1)
+            {
+                J4square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("J6"))
+        {
+            PP = "J6";
+            if (FlashLight.lightSwitch == 1)
+            {
+                J6square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("J8"))
+        {
+            PP = "J8";
+            if (FlashLight.lightSwitch == 1)
+            {
+                J8square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("J10"))
+        {
+            PP = "J10";
+            if (FlashLight.lightSwitch == 1)
+            {
+                J10square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("J11"))
+        {
+            PP = "J11";
+            if (FlashLight.lightSwitch == 1)
+            {
+                J10square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("J14"))
+        {
+            PP = "J14";
+            if (FlashLight.lightSwitch == 1)
+            {
+                J14square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("K1"))
+        {
+            PP = "K1";
+            if (FlashLight.lightSwitch == 1)
+            {
+                K1square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("K4"))
+        {
+            PP = "K4";
+            if (FlashLight.lightSwitch == 1)
+            {
+                K4square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("K6"))
+        {
+            PP = "K6";
+            if (FlashLight.lightSwitch == 1)
+            {
+                K6square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("K10"))
+        {
+            PP = "K10";
+            if (FlashLight.lightSwitch == 1)
+            {
+                K10square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("K14"))
+        {
+            PP = "K14";
+            if (FlashLight.lightSwitch == 1)
+            {
+                K14square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("L1"))
+        {
+            PP = "L1";
+            if (FlashLight.lightSwitch == 1)
+            {
+                L1square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("L4"))
+        {
+            PP = "L4";
+            if (FlashLight.lightSwitch == 1)
+            {
+                L4square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("L5"))
+        {
+            PP = "L5";
+            if (FlashLight.lightSwitch == 1)
+            {
+                L5square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("L6"))
+        {
+            PP = "L6";
+            if (FlashLight.lightSwitch == 1)
+            {
+                L6square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("L10"))
+        {
+            PP = "L10";
+            if (FlashLight.lightSwitch == 1)
+            {
+                L10square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("L11"))
+        {
+            PP = "L11";
+            if (FlashLight.lightSwitch == 1)
+            {
+                L11square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("L12"))
+        {
+            PP = "L12";
+            if (FlashLight.lightSwitch == 1)
+            {
+                L12square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("L13"))
+        {
+            PP = "L13";
+            if (FlashLight.lightSwitch == 1)
+            {
+                L13square = true;
+            }
+        }
+        if (other.gameObject.CompareTag("L14"))
+        {
+            PP = "L14";
+            if (FlashLight.lightSwitch == 1)
+            {
+                L14square = true;
+            }
+        }
+        if (other.gameObject.CompareTag ("Key")) { //if the player enters the key room trigger
+            PP = "Key";
 			if (FlashLight.lightSwitch == 1) { //and their flashlight is on
 				Keysquare = true; //set the Keysquare bool to true
                 FlashLight.battery = 100;
@@ -1022,6 +1526,7 @@ public class MapScreen : MonoBehaviour {
 			KeyIcon.SetActive (true); //set the KeyIcon active in the hierarchy
 		}
 		if (other.gameObject.CompareTag ("End")) { //if the player enters the end room trigger
+            PP = "End";
 			if (FlashLight.lightSwitch == 1) { //and their flashlight is on
 				Endsquare = true; //set the Endsquare bool to true
 			}
