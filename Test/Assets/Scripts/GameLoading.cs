@@ -10,6 +10,8 @@ public class GameLoading : MonoBehaviour {
 		}
 
 	public void BackToTitle() { //create a function for going back to the main menu
-		SceneManager.LoadScene ("Menu"); //load the menu scene
+        AttemptCounter.attempts++;
+        PlayerPrefs.SetInt("attemptNum", AttemptCounter.attempts);
+        SceneManager.LoadScene ("Menu"); //load the menu scene
 	}
 }

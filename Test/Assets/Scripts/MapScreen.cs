@@ -87,6 +87,9 @@ public class MapScreen : MonoBehaviour {
 
 	public GameObject KeyIcon; //create a slot in the inspector for the key icon
 
+    public GameObject batteryPickup;
+    public bool BatteryAlive;
+
 	public AudioClip keyNotice; //create a slot in the inspector for the key soundclip
 	public AudioClip doorOpen; //create a slot in the inspector for the door soundclip
 
@@ -337,6 +340,8 @@ public class MapScreen : MonoBehaviour {
 		bool L14square = false;
 		bool Keysquare = false;
 		bool Endsquare = false;
+
+        BatteryAlive = true;
 	}
 	
 	// Update is called once per frame
@@ -760,8 +765,16 @@ public class MapScreen : MonoBehaviour {
 		if (other.gameObject.CompareTag ("I4") && FlashLight.lightSwitch == 1) {
 			I4square = true;
 		}
-		if (other.gameObject.CompareTag ("I6") && FlashLight.lightSwitch == 1) {
-			I6square = true;
+		if (other.gameObject.CompareTag ("I6")) {
+            if (BatteryAlive == true)
+            {
+                Destroy(batteryPickup);
+                FlashLight.battery = 100;
+                BatteryAlive = false;
+            }
+            if (FlashLight.lightSwitch == 1) {
+                I6square = true;
+            }
 		}
 		if (other.gameObject.CompareTag ("I8") && FlashLight.lightSwitch == 1) {
 			I8square = true;
@@ -838,6 +851,7 @@ public class MapScreen : MonoBehaviour {
 		if (other.gameObject.CompareTag ("Key")) { //if the player enters the key room trigger
 			if (FlashLight.lightSwitch == 1) { //and their flashlight is on
 				Keysquare = true; //set the Keysquare bool to true
+                FlashLight.battery = 100;
 			}
 			AudioSource audio = GetComponent<AudioSource> (); //get audioSource component
 			audio.PlayOneShot (keyNotice); //play the key soundclip

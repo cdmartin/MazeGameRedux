@@ -9,7 +9,7 @@ public class FlashLight : MonoBehaviour {
 	public GameObject flashy; //get the flashlight object
 	public Text batteryDisplay; //create a slot in the inspector to use the batteryDisplay text
 	public static int lightSwitch = 0; //integer that will change value if the light is "on" or "off"
-	private int battery = 100; //create a var for amount of battery the flashlight has
+	public static int battery = 100; //create a var for amount of battery the flashlight has
 	public float drainTime = 1; //create a float for the time it takes for the BatteryDrain function to repeat
 	public AudioClip turnOn; //create a slot in the inspector for the turnOn audioclip
 	public AudioClip turnOff; //create a slot in the inspector for the turnOff audioclip
@@ -40,6 +40,8 @@ public class FlashLight : MonoBehaviour {
 			CancelInvoke("BatteryDrain"); //stop Battery Drain function
 		}
 		if (battery <= 0) { //if battery is less than or equal to 0
+            AttemptCounter.attempts++;
+            PlayerPrefs.SetInt("attemptNum", AttemptCounter.attempts);
 			SceneManager.LoadScene ("Lose"); //load losing screen
 		}
 	}
