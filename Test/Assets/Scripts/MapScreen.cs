@@ -261,6 +261,9 @@ public class MapScreen : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+        KeyGet = 0;
+
 		//set all map and other UI objects inactive
 		Map.SetActive (false);
         StartIcon.SetActive(false);
@@ -503,6 +506,7 @@ public class MapScreen : MonoBehaviour {
 		bool L14square = false;
 		bool Keysquare = false;
 		bool Endsquare = false;
+
 
         BatteryAlive = true;
 	}
@@ -888,6 +892,502 @@ public class MapScreen : MonoBehaviour {
         else if (PP != "C9")
         {
             C9Icon.SetActive(false);
+        }
+        if (PP == "C13")
+        {
+            C13Icon.SetActive(true);
+        }
+        else if (PP != "C13")
+        {
+            C13Icon.SetActive(false);
+        }
+        if (PP == "C14")
+        {
+            C14Icon.SetActive(true);
+        }
+        else if (PP != "C14")
+        {
+            C14Icon.SetActive(false);
+        }
+        if (PP == "D4")
+        {
+            D4Icon.SetActive(true);
+        }
+        else if (PP != "D4")
+        {
+            D4Icon.SetActive(false);
+        }
+        if (PP == "D5")
+        {
+            D5Icon.SetActive(true);
+        }
+        else if (PP != "D5")
+        {
+            D5Icon.SetActive(false);
+        }
+        if (PP == "D6")
+        {
+            D6Icon.SetActive(true);
+        }
+        else if (PP != "D6")
+        {
+            D6Icon.SetActive(false);
+        }
+        if (PP == "D13")
+        {
+            D13Icon.SetActive(true);
+        }
+        else if (PP != "D13")
+        {
+            D13Icon.SetActive(false);
+        }
+        if (PP == "E4")
+        {
+            E4Icon.SetActive(true);
+        }
+        else if (PP != "E4")
+        {
+            E4Icon.SetActive(false);
+        }
+        if (PP == "E6")
+        {
+            E6Icon.SetActive(true);
+        }
+        else if (PP != "E6")
+        {
+            E6Icon.SetActive(false);
+        }
+        if (PP == "E7")
+        {
+            E7Icon.SetActive(true);
+        }
+        else if (PP != "E7")
+        {
+            E7Icon.SetActive(false);
+        }
+        if (PP == "E8")
+        {
+            E8Icon.SetActive(true);
+        }
+        else if (PP != "E8")
+        {
+            E8Icon.SetActive(false);
+        }
+        if (PP == "E9")
+        {
+            E9Icon.SetActive(true);
+        }
+        else if (PP != "E9")
+        {
+            E9Icon.SetActive(false);
+        }
+        if (PP == "E10")
+        {
+            E10Icon.SetActive(true);
+        }
+        else if (PP != "E10")
+        {
+            E10Icon.SetActive(false);
+        }
+        if (PP == "E11")
+        {
+            E11Icon.SetActive(true);
+        }
+        else if (PP != "E11")
+        {
+            E11Icon.SetActive(false);
+        }
+        if (PP == "E13")
+        {
+            E13Icon.SetActive(true);
+        }
+        else if (PP != "E13")
+        {
+            E13Icon.SetActive(false);
+        }
+        if (PP == "E14")
+        {
+            E14Icon.SetActive(true);
+        }
+        else if (PP != "E14")
+        {
+            E14Icon.SetActive(false);
+        }
+        if (PP == "F4")
+        {
+            F4Icon.SetActive(true);
+        }
+        else if (PP != "F4")
+        {
+            F4Icon.SetActive(false);
+        }
+        if (PP == "F11")
+        {
+            F11Icon.SetActive(true);
+        }
+        else if (PP != "F11")
+        {
+            F11Icon.SetActive(false);
+        }
+        if (PP == "F12")
+        {
+            F12Icon.SetActive(true);
+        }
+        else if (PP != "F12")
+        {
+            F12Icon.SetActive(false);
+        }
+        if (PP == "F14")
+        {
+            F14Icon.SetActive(true);
+        }
+        else if (PP != "F14")
+        {
+            F14Icon.SetActive(false);
+        }
+        if (PP == "G1")
+        {
+            G1Icon.SetActive(true);
+        }
+        else if (PP != "G1")
+        {
+            G1Icon.SetActive(false);
+        }
+        if (PP == "G2")
+        {
+            G2Icon.SetActive(true);
+        }
+        else if (PP != "G2")
+        {
+            G2Icon.SetActive(false);
+        }
+        if (PP == "G3")
+        {
+            G3Icon.SetActive(true);
+        }
+        else if (PP != "G3")
+        {
+            G3Icon.SetActive(false);
+        }
+        if (PP == "G4")
+        {
+            G4Icon.SetActive(true);
+        }
+        else if (PP != "G4")
+        {
+            G4Icon.SetActive(false);
+        }
+        if (PP == "G8")
+        {
+            G8Icon.SetActive(true);
+        }
+        else if (PP != "G8")
+        {
+            G8Icon.SetActive(false);
+        }
+        if (PP == "G12")
+        {
+            G12Icon.SetActive(true);
+        }
+        else if (PP != "G12")
+        {
+            G12Icon.SetActive(false);
+        }
+        if (PP == "G13")
+        {
+            G13Icon.SetActive(true);
+        }
+        else if (PP != "G13")
+        {
+            G13Icon.SetActive(false);
+        }
+        if (PP == "G14")
+        {
+            G14Icon.SetActive(true);
+        }
+        else if (PP != "G14")
+        {
+            G14Icon.SetActive(false);
+        }
+        if (PP == "H1")
+        {
+            H1Icon.SetActive(true);
+        }
+        else if (PP != "H1")
+        {
+            H1Icon.SetActive(false);
+        }
+        if (PP == "H4")
+        {
+            H4Icon.SetActive(true);
+        }
+        else if (PP != "H4")
+        {
+            H4Icon.SetActive(false);
+        }
+        if (PP == "H8")
+        {
+            H8Icon.SetActive(true);
+        }
+        else if (PP != "H8")
+        {
+            H8Icon.SetActive(false);
+        }
+        if (PP == "H9")
+        {
+            H9Icon.SetActive(true);
+        }
+        else if (PP != "H9")
+        {
+            H9Icon.SetActive(false);
+        }
+        if (PP == "H10")
+        {
+            H10Icon.SetActive(true);
+        }
+        else if (PP != "H10")
+        {
+            H10Icon.SetActive(false);
+        }
+        if (PP == "H11")
+        {
+            H11Icon.SetActive(true);
+        }
+        else if (PP != "H11")
+        {
+            H11Icon.SetActive(false);
+        }
+        if (PP == "H14")
+        {
+            H14Icon.SetActive(true);
+        }
+        else if (PP != "H14")
+        {
+            H14Icon.SetActive(false);
+        }
+        if (PP == "I1")
+        {
+            I1Icon.SetActive(true);
+        }
+        else if (PP != "I1")
+        {
+            I1Icon.SetActive(false);
+        }
+        if (PP == "I4")
+        {
+            I4Icon.SetActive(true);
+        }
+        else if (PP != "I4")
+        {
+            I4Icon.SetActive(false);
+        }
+        if (PP == "I6")
+        {
+            I6Icon.SetActive(true);
+        }
+        else if (PP != "I6")
+        {
+            I6Icon.SetActive(false);
+        }
+        if (PP == "I8")
+        {
+            I8Icon.SetActive(true);
+        }
+        else if (PP != "I8")
+        {
+            I8Icon.SetActive(false);
+        }
+        if (PP == "Key")
+        {
+            KeySquareIcon.SetActive(true);
+        }
+        if (PP == "I11")
+        {
+            I11Icon.SetActive(true);
+        }
+        else if (PP != "I11")
+        {
+            I11Icon.SetActive(false);
+        }
+        if (PP == "I14")
+        {
+            I14Icon.SetActive(true);
+        }
+        else if (PP != "I14")
+        {
+            I14Icon.SetActive(false);
+        }
+        if (PP == "J1")
+        {
+            J1Icon.SetActive(true);
+        }
+        else if (PP != "J1")
+        {
+            J1Icon.SetActive(false);
+        }
+        if (PP == "J4")
+        {
+            J4Icon.SetActive(true);
+        }
+        else if (PP != "J4")
+        {
+            J4Icon.SetActive(false);
+        }
+        if (PP == "J6")
+        {
+            J6Icon.SetActive(true);
+        }
+        else if (PP != "J6")
+        {
+            J6Icon.SetActive(false);
+        }
+        if (PP == "J8")
+        {
+            J8Icon.SetActive(true);
+        }
+        else if (PP != "J8")
+        {
+            J8Icon.SetActive(false);
+        }
+        if (PP == "J10")
+        {
+            J10Icon.SetActive(true);
+        }
+        else if (PP != "J10")
+        {
+            J10Icon.SetActive(false);
+        }
+        if (PP == "J11")
+        {
+            J11Icon.SetActive(true);
+        }
+        else if (PP != "J11")
+        {
+            J11Icon.SetActive(false);
+        }
+        if (PP == "J14")
+        {
+            J14Icon.SetActive(true);
+        }
+        else if (PP != "J14")
+        {
+            J14Icon.SetActive(false);
+        }
+        if (PP == "K1")
+        {
+            K1Icon.SetActive(true);
+        }
+        else if (PP != "K1")
+        {
+            K1Icon.SetActive(false);
+        }
+        if (PP == "K4")
+        {
+            K4Icon.SetActive(true);
+        }
+        else if (PP != "K4")
+        {
+            K4Icon.SetActive(false);
+        }
+        if (PP == "K6")
+        {
+            K6Icon.SetActive(true);
+        }
+        else if (PP != "K6")
+        {
+            K6Icon.SetActive(false);
+        }
+        if (PP == "K10")
+        {
+            K10Icon.SetActive(true);
+        }
+        else if (PP != "K10")
+        {
+            K10Icon.SetActive(false);
+        }
+        if (PP == "K14")
+        {
+            K14Icon.SetActive(true);
+        }
+        else if (PP != "K14")
+        {
+            K14Icon.SetActive(false);
+        }
+        if (PP == "L1")
+        {
+            L1Icon.SetActive(true);
+        }
+        else if (PP != "L1")
+        {
+            L1Icon.SetActive(false);
+        }
+        if (PP == "L4")
+        {
+            L4Icon.SetActive(true);
+        }
+        else if (PP != "L4")
+        {
+            L4Icon.SetActive(false);
+        }
+        if (PP == "L5")
+        {
+            L5Icon.SetActive(true);
+        }
+        else if (PP != "L5")
+        {
+            L5Icon.SetActive(false);
+        }
+        if (PP == "L6")
+        {
+            L6Icon.SetActive(true);
+        }
+        else if (PP != "L6")
+        {
+            L6Icon.SetActive(false);
+        }
+        if (PP == "L10")
+        {
+            L10Icon.SetActive(true);
+        }
+        else if (PP != "L10")
+        {
+            L10Icon.SetActive(false);
+        }
+        if (PP == "L11")
+        {
+            L11Icon.SetActive(true);
+        }
+        else if (PP != "L11")
+        {
+            L11Icon.SetActive(false);
+        }
+        if (PP == "L12")
+        {
+            L12Icon.SetActive(true);
+        }
+        else if (PP != "L12")
+        {
+            L12Icon.SetActive(false);
+        }
+        if (PP == "L13")
+        {
+            L13Icon.SetActive(true);
+        }
+        else if (PP != "L13")
+        {
+            L13Icon.SetActive(false);
+        }
+        if (PP == "L14")
+        {
+            L14Icon.SetActive(true);
+        }
+        else if (PP != "L14")
+        {
+            L14Icon.SetActive(false);
+        }
+        if (PP == "End")
+        {
+            EndIcon.SetActive(true);
         }
     }
 
